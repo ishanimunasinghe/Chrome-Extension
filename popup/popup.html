@@ -25,29 +25,41 @@
         <div class="field">
             <label class="label">Time: Depart At or Arrive By?</label>
             <div class="select"></div>
-            <select></select>
-            <input type="time" class="input">
+            <select id="departOrArrive">
+                <option value="depart_at">Depart At</option>
+                <option value="arrive_by">Arrive By</option>
+            </select>
+            <input type="time" class="input" id="timeID">
 
         </div>
 
 
         <div class="field">
-            <label class="label">Location</label>
+            <label class="label">Start Location</label>
             <div class="control">
-                <input type="location" class="input">
+                <input type="location" class="input" id="startLocation">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">End Location</label>
+            <div class="control">
+                <input type="location" class="input" id="endLocation">
             </div>
         </div>
     </div>
 
     <div class="container m-3">
-        <button class="button is-success is-fullwidth">Find Routes</button>
+        <button class="button is-success is-fullwidth" id="startButton">Find Routes</button>
     </div>
 
     <div class="container m-3">
-        <button class="button is-danger is-fullwidth">Save & Start</button>
+        <button class="button is-danger is-fullwidth" id="cancelButton">Cancel</button>
     </div>
 
 
 </body>
+
+<script src="popup.js"></script>
 
 </html>
