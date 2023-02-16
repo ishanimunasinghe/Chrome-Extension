@@ -1,4 +1,4 @@
 # Chrome-Extension
 
-A simple chrome extension that allows changes the background of the user's Google.com homepage and search results. 
+A simple chrome extension finds the next bus from start and end locations and depart/arrive-by times. 
 
