@@ -13,7 +13,7 @@
     },
 
     "background": {
-        "servoce_worker": "background.js"
+        "service_worker": "background.js"
     },
 
     "permissions": [
