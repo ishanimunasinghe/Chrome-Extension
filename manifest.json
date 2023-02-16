@@ -3,22 +3,21 @@
     "name": "CoolBackground",
     "description": "Add a custom background to Google.com",
     "version": "1.0",
+    "action":{
+        "default_popup": "popup/popup.html"
+    },
     "icons": {
         "16": "/images/icon16.png",
         "48": "/images/icon48.png",
         "128": "/images/icon128.jpg"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*.www.google.com/*"
-            ],
-            "css": [
-                "main.css"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
+
+    "background": {
+        "servoce_worker": "background.js"
+    },
+
+    "permissions": [
+        "storage"
     ]
+    
 }
