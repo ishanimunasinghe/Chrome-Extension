@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Transit Finder</title>
     <link rel="stylesheet" href="bulma.min.css" />
 </head>
+
 <body>
 
     <div class="container m-3">
@@ -21,19 +23,31 @@
 
     <div class="container m-3">
         <div class="field">
-            <label class="label">Location ID</label>
+            <label class="label">Time: Depart At or Arrive By?</label>
             <div class="select"></div>
             <select></select>
-        </div>
-    </div>
-    
-    <div class="field">
-        <label class="label">Depart Time</label>
-        <div class="control">
             <input type="time" class="input">
+
+        </div>
+
+
+        <div class="field">
+            <label class="label">Location</label>
+            <div class="control">
+                <input type="location" class="input">
+            </div>
         </div>
     </div>
 
-    
+    <div class="container m-3">
+        <button class="button is-success is-fullwidth">Find Routes</button>
+    </div>
+
+    <div class="container m-3">
+        <button class="button is-danger is-fullwidth">Save & Start</button>
+    </div>
+
+
 </body>
+
 </html>
