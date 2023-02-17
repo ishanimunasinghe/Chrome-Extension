@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "CoolBackground",
-    "description": "Add a custom background to Google.com",
+    "name": "Dictionary-Thesaurus",
+    "description": "Search for the definition and synonyms of a word.",
     "version": "1.0",
     "action":{
         "default_popup": "popup/popup.html"

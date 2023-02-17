@@ -12,7 +12,7 @@
 <body>
 
     <div class="container m-3">
-        <h1 class="title">Transit Finder</h1>
+        <h1 class="title is-family-primary has-text-centered" >Dictionary and Thesaurus</h1>
 
         <div class="field">
             <label class="label">Status</label>
@@ -23,34 +23,19 @@
 
     <div class="container m-3">
         <div class="field">
-            <label class="label">Time: Depart At or Arrive By?</label>
+            <label class="label">Select:</label>
             <div class="select"></div>
-            <select id="departOrArrive">
-                <option value="depart_at">Depart At</option>
-                <option value="arrive_by">Arrive By</option>
+            <select id="searchChoice">
+                <option value="dictionary">Dictionary</option>
+                <option value="thesaurus">Thesaurus</option>
             </select>
-            <input type="time" class="input" id="timeID">
+            <input type="text" class="input" id="word">
 
         </div>
 
-
-        <div class="field">
-            <label class="label">Start Location</label>
-            <div class="control">
-                <input type="location" class="input" id="startLocation">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">End Location</label>
-            <div class="control">
-                <input type="location" class="input" id="endLocation">
-            </div>
-        </div>
-    </div>
 
     <div class="container m-3">
-        <button class="button is-success is-fullwidth" id="startButton">Find Routes</button>
+        <button class="button is-success is-fullwidth" id="startButton">Search</button>
     </div>
 
     <div class="container m-3">
