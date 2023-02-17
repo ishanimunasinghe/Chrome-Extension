@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Dictionary-Thesaurus",
+    "name": "Clicktionary",
     "description": "Search for the definition and synonyms of a word.",
     "version": "1.0",
     "action":{
