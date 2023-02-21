@@ -1,12 +1,12 @@
-chrome.runtime.onInstalled.addListener(details => {
-    console.log("oninstalled reason: ", details.reason)
-}
+import fetchData from "./api/fetchData.js"
 
-)
+chrome.runtime.onInstalled.addListener(details => {
+    fetchData();
+})
 
 chrome.runtime.onMessage.addListener(data => {
-    const { event, prefs } = data 
-    switch (event){
+    const { event, prefs } = data
+    switch (event) {
         case 'onStop':
             handleOnStop();
             break;
