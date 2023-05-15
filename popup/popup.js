@@ -21,7 +21,7 @@ cancelButton.onclick = () => {
     chrome.runtime.sendMessage({ event: 'onStop'})
 }
 
-// Repopulates previously inputted values after popup is closed and opened again 
+// Repopulates previously inputted values after popup is closed then opened again 
 chrome.storage.local.get(["searchChoice", "word"], (result) => {
     const { searchChoice, word } = result;
 
