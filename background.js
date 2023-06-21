@@ -1,5 +1,17 @@
 import fetchData from "./api/fetchData.js"
 
+const serviceWorkerPath = chrome.runtime.getURL('background.js');
+navigator.serviceWorker.register(serviceWorkerPath)
+    .then(registration => {
+        // Registration successful
+        console.log('Service worker registered:', registration);
+    })
+    .catch(error => {
+        // Registration failed
+        console.log('Service worker registration failed:', error);
+    });
+
+
 chrome.runtime.onInstalled.addListener(details => {
     fetchData();
 })
