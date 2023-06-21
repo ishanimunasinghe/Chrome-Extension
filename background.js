@@ -1,4 +1,19 @@
-import fetchData from "./api/fetchData.js"
+// import fetchData from "./api/fetchData.js"
+
+async function fetchData() {
+    const words_endpoint = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word 
+
+    fetch(words_endpoint) 
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+}
+
 
 const serviceWorkerPath = chrome.runtime.getURL('background.js');
 navigator.serviceWorker.register(serviceWorkerPath)
@@ -12,12 +27,14 @@ navigator.serviceWorker.register(serviceWorkerPath)
     });
 
 
+
 chrome.runtime.onInstalled.addListener(details => {
     fetchData();
 })
 
-chrome.runtime.onMessage.addListener(data => {
-    const { event, prefs } = data
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    const { event, prefs } = data;
+
     switch (event) {
         case 'onStop':
             handleOnStop();
@@ -30,13 +47,14 @@ chrome.runtime.onMessage.addListener(data => {
     }
 })
 
-const handleOnStop = () => {
-    console.log("On stop in background")
-}
 
-const handleOnStart = (prefs) => {
-    console.log("On start in background")
-    console.log("prefs recieved:", prefs)
+function handleOnStop() {
+    console.log("On stop in background");
+  }
+  
+function handleOnStart(prefs) {
+    console.log("On start in background");
+    console.log("prefs received:", prefs);
 
-    chrome.storage.local.set(prefs)
+    chrome.storage.local.set(prefs);
 }
